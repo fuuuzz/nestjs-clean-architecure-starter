@@ -1,0 +1,24 @@
+name: 'nestjs-clean-architecture-starter'
+version: '3.9'
+
+services:
+  database:
+    image: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgresql-data:/var/lib/postgresql/data:rw'
+    environment:
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_USER: dbuser
+      POSTGRES_DB: nestjs-clean-architecture-starter-db
+    networks:
+      - 'postgres-network'
+
+volumes:
+  postgresql-data:
+    driver: local
+
+networks:
+  postgres-network:
+    driver: bridge
