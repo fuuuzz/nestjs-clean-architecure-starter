@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TypeOrmConfigService } from './infrastructure/config/typeorm.config';
+import { TypeOrmConfigService } from './infrastructure/persistence/typeorm.config';
+import { AlbumModule } from './infrastructure/album/album.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { TypeOrmConfigService } from './infrastructure/config/typeorm.config';
       imports: [ConfigModule],
       useClass: TypeOrmConfigService,
     }),
+    AlbumModule,
   ],
   controllers: [],
   providers: [],

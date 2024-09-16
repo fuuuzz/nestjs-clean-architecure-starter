@@ -1,7 +1,7 @@
-import { Album } from 'src/domain/album/album.entity';
+import { AlbumEntity } from 'src/infrastructure/album/album.entity';
 
-describe('domain/album', () => {
-  const album = new Album('Absolution', new Date('2003-09-15'));
+describe('infrastructure/album/album.entity', () => {
+  const album = new AlbumEntity('Absolution', new Date('2003-09-15'));
 
   it('getters', () => {
     expect(album.id).toBeUndefined();
