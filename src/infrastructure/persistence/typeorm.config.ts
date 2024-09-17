@@ -1,23 +1,20 @@
-import { Injectable } from '@nestjs/common';
-import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
-import { ConfigService } from '@nestjs/config';
+import { DataSource, DataSourceOptions } from 'typeorm';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
-@Injectable()
-export class TypeOrmConfigService implements TypeOrmOptionsFactory {
-  constructor(private configService: ConfigService) {}
+const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE } = process.env;
 
-  createTypeOrmOptions(): TypeOrmModuleOptions {
-    return {
-      type: 'postgres',
-      host: this.configService.get<string>('DB_HOST'),
-      port: +this.configService.get<number>('DB_PORT'),
-      username: this.configService.get<string>('DB_USER'),
-      password: this.configService.get<string>('DB_PASSWORD'),
-      database: this.configService.get<string>('DB_DATABASE'),
-      entities: ['dist/**/*.entity{.ts,.js}'],
-      migrations: ['dist/migrations/**/*{.ts,.js}'],
-      synchronize: false,
-      migrationsTableName: 'migrations',
-    };
-  }
-}
+export const typeormConfig: DataSourceOptions = {
+  type: 'postgres',
+  host: DB_HOST,
+  port: +DB_PORT,
+  username: DB_USER,
+  password: DB_PASSWORD,
+  database: DB_DATABASE,
+  entities: ['dist/**/*.entity{.ts,.js}'],
+  migrations: ['dist/infrastructure/persistence/migrations/**/*{.ts,.js}'],
+  synchronize: false,
+  migrationsTableName: 'migrations',
+};
+
+export default new DataSource(typeormConfig);

@@ -1,16 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TypeOrmConfigService } from './infrastructure/persistence/typeorm.config';
 import { AlbumModule } from './infrastructure/album/album.module';
+import { typeormConfig } from './infrastructure/persistence/typeorm.config';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      useClass: TypeOrmConfigService,
-    }),
+    TypeOrmModule.forRoot(typeormConfig),
     AlbumModule,
   ],
   controllers: [],
