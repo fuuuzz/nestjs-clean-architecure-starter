@@ -10,12 +10,8 @@ export class AlbumEntity implements AlbumInterface {
   @Column({ type: 'varchar', nullable: false })
   public title: string;
 
-  @Column({ type: 'date' })
-  public releaseDate: Date;
-
-  constructor(title: string, releaseDate: Date, id?: string) {
+  constructor(title: string, id?: string) {
     this.title = title;
-    this.releaseDate = releaseDate;
     this.id = id;
   }
 }

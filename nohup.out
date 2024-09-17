@@ -1,0 +1,526 @@
+ Container nestjs-clean-architecture-starter-database-1  Running
+ Container nestjs-clean-architecture-starter-database-1  Waiting
+ Container nestjs-clean-architecture-starter-database-1  Healthy
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +14ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +40ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 72434  - [39m17/09/2024 11:41:22 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+make[1]: *** [server.start-test] Interrupt: 2
+
+> nestjs-clean-architecture-starter@0.0.1 start:dev
+> nest start --watch
+
+[2J[3J[H[[90m11:45:46[0m] Starting compilation in watch mode...
+
+[[90m11:45:47[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +38ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 73771  - [39m17/09/2024 11:45:47 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +20ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 73917  - [39m17/09/2024 11:46:07 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +46ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74204  - [39m17/09/2024 11:47:01 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +36ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74496  - [39m17/09/2024 11:47:33 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 74496  - [39m17/09/2024 11:47:33 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +41ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +30ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74594  - [39m17/09/2024 11:47:46 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 74594  - [39m17/09/2024 11:47:46 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +33ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 74701  - [39m17/09/2024 11:47:59 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 74701  - [39m17/09/2024 11:47:59 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +32ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 75463  - [39m17/09/2024 11:49:47 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 75463  - [39m17/09/2024 11:49:47 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +0ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +52ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 76708  - [39m17/09/2024 11:52:34 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +27ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 77203  - [39m17/09/2024 11:53:31 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +29ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 77414  - [39m17/09/2024 11:53:48 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 77414  - [39m17/09/2024 11:53:48 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +0ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +21ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78454  - [39m17/09/2024 11:57:09 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 78454  - [39m17/09/2024 11:57:09 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +27ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 78645  - [39m17/09/2024 11:57:28 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 78645  - [39m17/09/2024 11:57:28 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +27ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 78855  - [39m17/09/2024 11:57:48 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 78855  - [39m17/09/2024 11:57:48 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +0ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +28ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 79057  - [39m17/09/2024 11:58:08 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 79057  - [39m17/09/2024 11:58:08 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +0ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +25ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 79420  - [39m17/09/2024 11:58:48 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +36ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +28ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 79581  - [39m17/09/2024 11:59:02 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 79581  - [39m17/09/2024 11:59:02 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +0ms[39m
+node:net:1897
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at ExpressAdapter.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/platform-express/adapters/express-adapter.js:95:32)
+    at /Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:180:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/fuzz/dev/nestjs-clean-architecture-starter/node_modules/@nestjs/core/nest-application.js:170:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at bootstrap (/Users/fuzz/dev/nestjs-clean-architecture-starter/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v21.7.3
+
+> nestjs-clean-architecture-starter@0.0.1 start:test
+> NODE_ENV=test nest start
+
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRouterModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +30ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAlbumModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAlbumController {/api/albums}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/albums, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 80493  - [39m17/09/2024 12:01:02 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m

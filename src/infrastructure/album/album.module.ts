@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AlbumEntity } from './album.entity';
-import { AlbumController } from './album.controller';
+import { AlbumController } from './controllers/create.controller';
 import { SaveAlbum } from 'src/application/album/saveAlbum';
 import { AlbumRepository } from './album.repository';
 
