@@ -2,13 +2,13 @@ import { Inject } from '@nestjs/common';
 import { AlbumInterface } from 'src/domain/album/album.interface';
 import { AlbumRepositoryInterface } from 'src/domain/album/album.repository.interface';
 
-export class SaveAlbum {
+export class GetAllAlbumUseCase {
   constructor(
     @Inject('AlbumRepositoryInterface')
     private readonly albumRepository: AlbumRepositoryInterface,
   ) {}
 
-  public async execute(album: AlbumInterface): Promise<AlbumInterface> {
-    return await this.albumRepository.save(album);
+  public async execute(): Promise<AlbumInterface[]> {
+    return await this.albumRepository.findAll();
   }
 }

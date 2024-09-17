@@ -1,4 +1,3 @@
-// import { AlbumInterface } from 'src/domain/album/album.interface';
 import { AlbumInterface } from 'src/domain/album/album.interface';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 

@@ -10,6 +10,7 @@ describe('infrastructure/album/controllers/create.controller', () => {
 
     expect(status).toBe(201);
     expect(body).toMatchObject({
+      id: expect.any(String),
       title: 'Absolution',
     });
   });

@@ -12,15 +12,15 @@ export class AlbumRepository implements AlbumRepositoryInterface {
     private readonly repository: Repository<AlbumEntity>,
   ) {}
 
-  public async save(album: AlbumInterface): Promise<AlbumInterface> {
-    return await this.repository.save(album);
+  public save(album: AlbumInterface): Promise<AlbumInterface> {
+    return this.repository.save(album);
   }
 
   public async findOneById(id: string): Promise<AlbumInterface> {
-    return await this.repository
+    return this.repository
       .createQueryBuilder('album')
-      .select('*')
-      .where('id = :id', { id })
+      .select(['album.id', 'album.title'])
+      .where('album.id = :id', { id })
       .getOne();
   }
 

@@ -59,6 +59,12 @@ db.shell:
 		psql -U dbuser -h database -d nestjs-clean-architecture-starter-db-dev; \
 	'
 
+db.shell-test:
+	docker compose run --rm database bash -c ' \
+		export PGPASSWORD="dbpassword"; \
+		psql -U dbuser -h database -d nestjs-clean-architecture-starter-db-test; \
+	'
+
 # Generate a new database migration
 db.generate-migration:
 	npm run migration:generate src/infrastructure/persistence/migrations/$(NAME)
@@ -77,17 +83,24 @@ db.migrate:
 tests.unit:
 	npm run test:unit
 
-# Run integrations tests
-tests.integration:
-	$(MAKE) db.bootstrap-test
-	$(MAKE) db.migrate
+tests.setup:
 	$(MAKE) docker-compose-up
 	nohup npm run start:test &
 	@sleep 2
+
+tests.cleanup:
+		$(MAKE) server.kill
+		$(MAKE) db.bootstrap-test	
+		$(MAKE) db.migrate
+
+# Run integrations tests
+tests.integration:
+	$(MAKE) tests.setup
 	npm run test:integration $(ARGS)
-	$(MAKE) server.kill
-	$(MAKE) db.bootstrap-test
+	$(MAKE) tests.cleanup
 
 # Run test coverage
 tests.cov:
+	$(MAKE) tests.setup
 	npm run test:cov
+	$(MAKE) tests.cleanup

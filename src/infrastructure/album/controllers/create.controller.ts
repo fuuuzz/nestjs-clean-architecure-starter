@@ -1,13 +1,13 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { SaveAlbum } from 'src/application/album/saveAlbum';
+import { SaveAlbumUseCase } from 'src/application/album/save.use-case';
 import { AlbumInterface } from 'src/domain/album/album.interface';
 
 @Controller('albums')
-export class AlbumController {
-  constructor(private readonly saveAlbum: SaveAlbum) {}
+export class CreateAlbumController {
+  constructor(private readonly saveAlbumUseCase: SaveAlbumUseCase) {}
 
   @Post()
-  create(@Body() album: AlbumInterface) {
-    return this.saveAlbum.execute(album);
+  public async execute(@Body() album: AlbumInterface) {
+    return await this.saveAlbumUseCase.execute(album);
   }
 }
