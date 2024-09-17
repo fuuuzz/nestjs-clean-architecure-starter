@@ -63,6 +63,7 @@
   "jest": {
     "moduleFileExtensions": [
       "js",
+      "json",
       "ts"
     ],
     "modulePathIgnorePatterns": [
@@ -71,7 +72,6 @@
       "<rootDir>/src/infrastructure/persistence",
       "<rootDir>/.eslintrc.js"
     ],
-    "rootDir": "./",
     "setupFiles": [
       "dotenv/config"
     ],
