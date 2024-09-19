@@ -1,5 +1,5 @@
 import { Body, Controller, Param, Put } from '@nestjs/common';
-import { SaveAlbumUseCase } from 'src/application/album/save.use-case';
+import { SaveAlbumUseCase } from 'src/application/album/save.usecase';
 import { AlbumInterface } from 'src/domain/album/album.interface';
 
 @Controller('albums')

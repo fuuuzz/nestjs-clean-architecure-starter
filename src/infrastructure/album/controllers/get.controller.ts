@@ -1,5 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { GetAlbumUseCase } from 'src/application/album/get.use-case';
+import { GetAlbumUseCase } from 'src/application/album/get.usecase';
 
 @Controller('albums')
 export class GetAlbumController {

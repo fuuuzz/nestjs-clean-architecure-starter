@@ -66,12 +66,6 @@
       "json",
       "ts"
     ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/dist",
-      "<rootDir>/coverage",
-      "<rootDir>/src/infrastructure/persistence",
-      "<rootDir>/.eslintrc.js"
-    ],
     "setupFiles": [
       "dotenv/config"
     ],
@@ -81,10 +75,13 @@
     },
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
+      "^.+\\.ts$": "ts-jest"
     },
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "<rootDir>/src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/infrastructure/persistence/migrations/"
     ],
     "coverageDirectory": "./coverage",
     "testEnvironment": "node"
