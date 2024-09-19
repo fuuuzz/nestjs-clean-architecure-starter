@@ -35,4 +35,15 @@ describe('infrastructure/album/controllers/delete.controller', () => {
     expect(status).toBe(200);
     expect(body).toMatchObject({ title: absolution.title });
   });
+
+  it('should fail when album does not exist', async () => {
+    jest.spyOn(mockAlbumRepository, 'findOneById').mockResolvedValue(null);
+
+    const { body, status } = await request(app.getHttpServer()).delete(
+      `/albums/${absolution.id}`,
+    );
+
+    expect(status).toBe(404);
+    expect(body).toMatchObject({ message: 'Not Found', statusCode: 404 });
+  });
 });

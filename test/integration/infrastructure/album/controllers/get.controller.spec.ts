@@ -35,4 +35,15 @@ describe('infrastructure/album/controllers/get.controller', () => {
     expect(status).toBe(200);
     expect(body).toMatchObject(absolution);
   });
+
+  it('should fail when album does not exist', async () => {
+    jest.spyOn(mockAlbumRepository, 'findOneById').mockResolvedValue(null);
+
+    const { body, status } = await request(app.getHttpServer()).get(
+      `/albums/${absolution.id}`,
+    );
+
+    expect(status).toBe(404);
+    expect(body).toMatchObject({ message: 'Not Found', statusCode: 404 });
+  });
 });
