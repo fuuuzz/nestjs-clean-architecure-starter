@@ -16,15 +16,6 @@ server.start-dev:
 	$(MAKE) docker-compose-up
 	npm run start:dev
 
-# Start test server
-server.start-test:
-	$(MAKE) docker-compose-up
-	npm run start:test
-
-# Kill server on port 3000
-server.kill:
-	lsof -ti :3000 | xargs kill -9
-
 # ----------------------
 # db
 # ----------------------
@@ -32,25 +23,12 @@ server.kill:
 # Bootstrap databases and run migrations
 db.bootstrap:
 	$(MAKE) docker-compose-up
-	$(MAKE) db.bootstrap-dev
-	$(MAKE) db.bootstrap-test
-	$(MAKE) db.migrate
-
-# Bootstrap dev database
-db.bootstrap-dev:
 	docker compose run --rm database bash -c ' \
 		export PGPASSWORD="dbpassword"; \
 		dropdb --if-exists -U dbuser -h database nestjs-clean-architecture-starter-db-dev; \
 		createdb -U dbuser -h database nestjs-clean-architecture-starter-db-dev; \
 	'
-
-# Bootstrap test database
-db.bootstrap-test:
-	docker compose run --rm database bash -c ' \
-		export PGPASSWORD="dbpassword"; \
-		dropdb --if-exists -U dbuser -h database nestjs-clean-architecture-starter-db-test; \
-		createdb -U dbuser -h database nestjs-clean-architecture-starter-db-test; \
-	'
+	$(MAKE) db.migrate
 
 # Start new shell in database container
 db.shell:
@@ -58,13 +36,6 @@ db.shell:
 		export PGPASSWORD="dbpassword"; \
 		psql -U dbuser -h database -d nestjs-clean-architecture-starter-db-dev; \
 	'
-
-db.shell-test:
-	docker compose run --rm database bash -c ' \
-		export PGPASSWORD="dbpassword"; \
-		psql -U dbuser -h database -d nestjs-clean-architecture-starter-db-test; \
-	'
-
 # Generate a new database migration
 db.generate-migration:
 	npm run migration:generate src/infrastructure/persistence/migrations/$(NAME)
@@ -72,35 +43,23 @@ db.generate-migration:
 # Run all database migrations
 db.migrate:
 	npm run migration:migrate
-	npm run migration:migrate:test
-
 
 # ----------------------
 # tests
 # ----------------------
 
+# Run tests
+tests:
+	npm run test
+
 # Run unit tests
 tests.unit:
 	npm run test:unit
 
-tests.setup:
-	$(MAKE) docker-compose-up
-	nohup npm run start:test &
-	@sleep 2
-
-tests.cleanup:
-		$(MAKE) server.kill
-		$(MAKE) db.bootstrap-test	
-		$(MAKE) db.migrate
-
 # Run integrations tests
 tests.integration:
-	$(MAKE) tests.setup
-	npm run test:integration $(ARGS)
-	$(MAKE) tests.cleanup
+	npm run test:integration
 
 # Run test coverage
 tests.cov:
-	$(MAKE) tests.setup
 	npm run test:cov
-	$(MAKE) tests.cleanup
