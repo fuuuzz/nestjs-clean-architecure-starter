@@ -1,26 +1,22 @@
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppModule } from 'src/app.module';
-import { GetAllAlbumUsecase } from 'src/application/album/getAll.usecase';
-import { GetAllAlbumController } from 'src/infrastructure/album/controllers/getAll.controller';
+import { DeleteAlbumUsecase } from 'src/application/album/delete.usecase';
+import { DeleteAlbumController } from 'src/infrastructure/album/controllers/delete.controller';
 import * as request from 'supertest';
-import {
-  mockAlbumRepository,
-  absolution,
-  originOfSymmetry,
-} from 'test/mocks/album';
+import { mockAlbumRepository, absolution } from 'test/mocks/album';
 
-describe('infrastructure/album/controllers/getAll.controller', () => {
+describe('infrastructure/album/controllers/delete.controller', () => {
   let app: INestApplication;
 
   beforeAll(async () => {
     const appModule: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
       providers: [
-        GetAllAlbumUsecase,
+        DeleteAlbumUsecase,
         { provide: 'AlbumRepositoryInterface', useValue: mockAlbumRepository },
       ],
-      controllers: [GetAllAlbumController],
+      controllers: [DeleteAlbumController],
     }).compile();
 
     app = appModule.createNestApplication();
@@ -31,10 +27,12 @@ describe('infrastructure/album/controllers/getAll.controller', () => {
     await app.close();
   });
 
-  it('should fetch all albums', async () => {
-    const { body, status } = await request(app.getHttpServer()).get(`/albums`);
+  it('should delete a specific album according to its id', async () => {
+    const { body, status } = await request(app.getHttpServer()).delete(
+      `/albums/${absolution.id}`,
+    );
 
     expect(status).toBe(200);
-    expect(body).toMatchObject([absolution, originOfSymmetry]);
+    expect(body).toMatchObject({ title: absolution.title });
   });
 });

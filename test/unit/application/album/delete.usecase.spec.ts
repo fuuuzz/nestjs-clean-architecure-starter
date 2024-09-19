@@ -1,32 +1,34 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { GetAlbumUsecase } from 'src/application/album/get.usecase';
+import { DeleteAlbumUsecase } from 'src/application/album/delete.usecase';
 import { mockAlbumRepository, absolution } from 'test/mocks/album';
 
-describe('application/album/get.usecase', () => {
-  let useCase: GetAlbumUsecase;
+describe('application/album/delete.usecase', () => {
+  let useCase: DeleteAlbumUsecase;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        GetAlbumUsecase,
+        DeleteAlbumUsecase,
         { provide: 'AlbumRepositoryInterface', useValue: mockAlbumRepository },
       ],
     }).compile();
 
-    useCase = module.get<GetAlbumUsecase>(GetAlbumUsecase);
+    useCase = module.get<DeleteAlbumUsecase>(DeleteAlbumUsecase);
   });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('should return a specific album', async () => {
+  it('should delete a specific album according to its id', async () => {
     const result = await useCase.execute(absolution.id);
 
-    expect(result).toMatchObject(absolution);
+    expect(result).toMatchObject({ title: absolution.title });
     expect(mockAlbumRepository.findOneById).toHaveBeenCalledTimes(1);
     expect(mockAlbumRepository.findOneById).toHaveBeenCalledWith(absolution.id);
+    expect(mockAlbumRepository.delete).toHaveBeenCalledTimes(1);
+    expect(mockAlbumRepository.delete).toHaveBeenCalledWith(absolution);
   });
 
   it('should fail when album does not exist', async () => {

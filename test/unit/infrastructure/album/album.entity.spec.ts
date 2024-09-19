@@ -1,16 +1,14 @@
-import { AlbumEntity } from 'src/infrastructure/album/album.entity';
+import { absolution } from 'test/mocks/album';
 
 describe('infrastructure/album/album.entity', () => {
-  const album = new AlbumEntity('Absolution');
-
   it('getters', () => {
-    expect(album.id).toBeUndefined();
-    expect(album.title).toBe('Absolution');
+    expect(absolution.id).toBe('af402450-ca1a-4e41-ae34-c80b1a85c933');
+    expect(absolution.title).toBe('Absolution');
   });
 
   it('setters', () => {
-    album.title = 'Origin of symmetry';
+    absolution.title = 'Origin of symmetry';
 
-    expect(album.title).toBe('Origin of symmetry');
+    expect(absolution.title).toBe('Origin of symmetry');
   });
 });

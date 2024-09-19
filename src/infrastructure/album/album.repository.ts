@@ -16,7 +16,7 @@ export class AlbumRepository implements AlbumRepositoryInterface {
     return this.repository.save(album);
   }
 
-  public async findOneById(id: string): Promise<AlbumInterface> {
+  public findOneById(id: string): Promise<AlbumInterface> {
     return this.repository
       .createQueryBuilder('album')
       .select(['album.id', 'album.title'])
@@ -24,11 +24,11 @@ export class AlbumRepository implements AlbumRepositoryInterface {
       .getOne();
   }
 
-  public async findAll(): Promise<AlbumInterface[]> {
-    return await this.repository.find();
+  public findAll(): Promise<AlbumInterface[]> {
+    return this.repository.find();
   }
 
-  public async delete(album: AlbumInterface): Promise<AlbumInterface> {
-    return await this.repository.remove(album);
+  public delete(album: AlbumInterface): Promise<AlbumInterface> {
+    return this.repository.remove(album);
   }
 }

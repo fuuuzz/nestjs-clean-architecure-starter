@@ -1,23 +1,38 @@
+import { INestApplication } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
+import { AppModule } from 'src/app.module';
+import { GetAlbumUsecase } from 'src/application/album/get.usecase';
+import { GetAlbumController } from 'src/infrastructure/album/controllers/get.controller';
 import * as request from 'supertest';
-import { cleanupDb, populateDb } from 'test/utils/database';
+import { mockAlbumRepository, absolution } from 'test/mocks/album';
 
 describe('infrastructure/album/controllers/get.controller', () => {
-  beforeEach(async () => {
-    await populateDb();
+  let app: INestApplication;
+
+  beforeAll(async () => {
+    const appModule: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+      providers: [
+        GetAlbumUsecase,
+        { provide: 'AlbumRepositoryInterface', useValue: mockAlbumRepository },
+      ],
+      controllers: [GetAlbumController],
+    }).compile();
+
+    app = appModule.createNestApplication();
+    await app.init();
   });
 
-  afterEach(async () => {
-    await cleanupDb();
+  afterAll(async () => {
+    await app.close();
   });
 
-  it('Should succesfully get an album', async () => {
-    const { body, status } = await request(process.env.API_URL).get(
-      `/albums/ed6ef473-5fb3-4060-b4ae-18a3f9c7e393`,
+  it('should fetch a specific albums according to its id', async () => {
+    const { body, status } = await request(app.getHttpServer()).get(
+      `/albums/${absolution.id}`,
     );
+
     expect(status).toBe(200);
-    expect(body).toMatchObject({
-      id: 'ed6ef473-5fb3-4060-b4ae-18a3f9c7e393',
-      title: 'Origin of symmetry',
-    });
+    expect(body).toMatchObject(absolution);
   });
 });
