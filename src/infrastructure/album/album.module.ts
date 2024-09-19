@@ -2,13 +2,13 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AlbumEntity } from './album.entity';
 import { CreateAlbumController } from './controllers/create.controller';
-import { SaveAlbumUseCase } from 'src/application/album/save.usecase';
+import { SaveAlbumUsecase } from 'src/application/album/save.usecase';
 import { AlbumRepository } from './album.repository';
 import { UpdateAlbumController } from './controllers/update.controller';
-import { GetAlbumUseCase } from 'src/application/album/get.usecase';
+import { GetAlbumUsecase } from 'src/application/album/get.usecase';
 import { GetAlbumController } from './controllers/get.controller';
 import { GetAllAlbumController } from './controllers/getAll.controller';
-import { GetAllAlbumUseCase } from 'src/application/album/getAll.usecase';
+import { GetAllAlbumUsecase } from 'src/application/album/getAll.usecase';
 
 @Module({
   imports: [TypeOrmModule.forFeature([AlbumEntity])],
@@ -20,9 +20,9 @@ import { GetAllAlbumUseCase } from 'src/application/album/getAll.usecase';
   ],
   providers: [
     { provide: 'AlbumRepositoryInterface', useClass: AlbumRepository },
-    SaveAlbumUseCase,
-    GetAlbumUseCase,
-    GetAllAlbumUseCase,
+    SaveAlbumUsecase,
+    GetAlbumUsecase,
+    GetAllAlbumUsecase,
   ],
 })
 export class AlbumModule {}

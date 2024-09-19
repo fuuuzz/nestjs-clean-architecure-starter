@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
-import { GetAllAlbumUseCase } from 'src/application/album/getAll.usecase';
+import { GetAllAlbumUsecase } from 'src/application/album/getAll.usecase';
 
 @Controller('albums')
 export class GetAllAlbumController {
-  constructor(private readonly getAllAlbumUseCase: GetAllAlbumUseCase) {}
+  constructor(private readonly getAllAlbumUsecase: GetAllAlbumUsecase) {}
 
   @Get()
   public execute() {
-    return this.getAllAlbumUseCase.execute();
+    return this.getAllAlbumUsecase.execute();
   }
 }
