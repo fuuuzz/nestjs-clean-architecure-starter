@@ -4,8 +4,13 @@ import { AppModule } from 'src/app.module';
 import { absolution, originOfSymmetry } from 'test/mocks/album';
 import { DataSource, QueryRunner } from 'typeorm';
 
-const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE_TEST } =
-  process.env;
+const {
+  POSTGRES_HOST,
+  POSTGRES_PORT,
+  POSTGRES_USER,
+  POSTGRES_PASSWORD,
+  POSTGRES_DB_TEST,
+} = process.env;
 
 let appDataSource: DataSource;
 let queryRunner: QueryRunner;
@@ -13,11 +18,19 @@ let queryRunner: QueryRunner;
 global.beforeAll(async () => {
   const dataSource: DataSource = new DataSource({
     type: 'postgres',
-    host: DB_HOST,
-    port: +DB_PORT,
-    username: DB_USER,
-    password: DB_PASSWORD,
-    database: DB_DATABASE_TEST,
+    host: POSTGRES_HOST,
+    port: +POSTGRES_PORT,
+    username: POSTGRES_USER,
+    password: POSTGRES_PASSWORD,
+    database: POSTGRES_DB_TEST,
+  });
+
+  console.log({
+    POSTGRES_HOST,
+    POSTGRES_PORT,
+    POSTGRES_USER,
+    POSTGRES_PASSWORD,
+    POSTGRES_DB_TEST,
   });
 
   appDataSource = await dataSource.initialize();
@@ -54,11 +67,11 @@ global.setAppModule = async (
     imports: [
       TypeOrmModule.forRoot({
         type: 'postgres',
-        host: DB_HOST,
-        port: +DB_PORT,
-        username: DB_USER,
-        password: DB_PASSWORD,
-        database: DB_DATABASE_TEST,
+        host: POSTGRES_HOST,
+        port: +POSTGRES_PORT,
+        username: POSTGRES_USER,
+        password: POSTGRES_PASSWORD,
+        database: POSTGRES_DB_TEST,
         entities: [entity],
       }),
       TypeOrmModule.forFeature([entity]),

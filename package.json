@@ -22,7 +22,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "typeorm": "typeorm-ts-node-commonjs",
     "migration:generate": "npm run typeorm -- migration:generate -d src/infrastructure/persistence/typeorm.config.ts",
-    "migration:migrate": "npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts & DB_DATABASE=nestjs-clean-architecture-starter-db-test npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts"
+    "migration:migrate": "npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts & POSTGRES_DB=nestjs-clean-architecture-starter-db-test npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

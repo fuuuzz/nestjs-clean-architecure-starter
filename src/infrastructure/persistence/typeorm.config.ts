@@ -2,15 +2,21 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE } = process.env;
+const {
+  POSTGRES_HOST,
+  POSTGRES_PORT,
+  POSTGRES_USER,
+  POSTGRES_PASSWORD,
+  POSTGRES_DB,
+} = process.env;
 
 export const typeormConfig: DataSourceOptions = {
   type: 'postgres',
-  host: DB_HOST,
-  port: +DB_PORT,
-  username: DB_USER,
-  password: DB_PASSWORD,
-  database: DB_DATABASE,
+  host: POSTGRES_HOST,
+  port: +POSTGRES_PORT,
+  username: POSTGRES_USER,
+  password: POSTGRES_PASSWORD,
+  database: POSTGRES_DB,
   entities: ['dist/**/*.entity{.ts,.js}'],
   migrations: ['dist/infrastructure/persistence/migrations/**/*{.ts,.js}'],
   synchronize: false,
