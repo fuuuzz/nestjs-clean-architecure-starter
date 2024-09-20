@@ -1,34 +1,23 @@
-import { INestApplication } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
-import { AppModule } from 'src/app.module';
 import { SaveAlbumUsecase } from 'src/application/album/save.usecase';
+import { AlbumEntity } from 'src/infrastructure/album/album.entity';
+import { AlbumRepository } from 'src/infrastructure/album/album.repository';
 import { CreateAlbumController } from 'src/infrastructure/album/controllers/create.controller';
 import * as request from 'supertest';
-import { mockAlbumRepository, absolution } from 'test/mocks/album';
+import { absolution } from 'test/mocks/album';
 
 describe('infrastructure/album/controllers/create.controller', () => {
-  let app: INestApplication;
-
   beforeAll(async () => {
-    const appModule: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
-      providers: [
-        SaveAlbumUsecase,
-        { provide: 'AlbumRepositoryInterface', useValue: mockAlbumRepository },
-      ],
-      controllers: [CreateAlbumController],
-    }).compile();
-
-    app = appModule.createNestApplication();
-    await app.init();
-  });
-
-  afterAll(async () => {
-    await app.close();
+    await global.setAppModule(
+      AlbumEntity,
+      SaveAlbumUsecase,
+      AlbumRepository,
+      'AlbumRepositoryInterface',
+      CreateAlbumController,
+    );
   });
 
   it('should create an album', async () => {
-    const { body, status } = await request(app.getHttpServer())
+    const { body, status } = await request(global.app.getHttpServer())
       .post(`/albums/`)
       .send(absolution);
 

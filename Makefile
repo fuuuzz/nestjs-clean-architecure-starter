@@ -23,11 +23,19 @@ server.start-dev:
 # Bootstrap databases and run migrations
 db.bootstrap:
 	$(MAKE) docker-compose-up
+
 	docker compose run --rm database bash -c ' \
 		export PGPASSWORD="dbpassword"; \
 		dropdb --if-exists -U dbuser -h database nestjs-clean-architecture-starter-db-dev; \
 		createdb -U dbuser -h database nestjs-clean-architecture-starter-db-dev; \
 	'
+
+	docker compose run --rm database bash -c ' \
+		export PGPASSWORD="dbpassword"; \
+		dropdb --if-exists -U dbuser -h database nestjs-clean-architecture-starter-db-test; \
+		createdb -U dbuser -h database nestjs-clean-architecture-starter-db-test; \
+	'
+
 	$(MAKE) db.migrate
 
 # Start new shell in database container

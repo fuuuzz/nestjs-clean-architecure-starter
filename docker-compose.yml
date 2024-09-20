@@ -11,7 +11,7 @@ services:
     environment:
       POSTGRES_PASSWORD: dbpassword
       POSTGRES_USER: dbuser
-      POSTGRES_DB: nestjs-clean-architecture-starter-db
+      POSTGRES_DB: nestjs-clean-architecture-starter-dev
     networks:
       - 'postgres-network'
 

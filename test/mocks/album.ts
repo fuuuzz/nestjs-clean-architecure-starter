@@ -6,7 +6,7 @@ export const absolution = new AlbumEntity(
   'af402450-ca1a-4e41-ae34-c80b1a85c933',
 );
 export const originOfSymmetry = new AlbumEntity(
-  'Origin of symmetrssssy',
+  'Origin of symmetry',
   'ed6ef473-5fb3-4060-b4ae-18a3f9c7e393',
 );
 

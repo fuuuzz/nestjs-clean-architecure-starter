@@ -1,34 +1,23 @@
-import { INestApplication } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
-import { AppModule } from 'src/app.module';
 import { GetAlbumUsecase } from 'src/application/album/get.usecase';
+import { AlbumEntity } from 'src/infrastructure/album/album.entity';
+import { AlbumRepository } from 'src/infrastructure/album/album.repository';
 import { GetAlbumController } from 'src/infrastructure/album/controllers/get.controller';
 import * as request from 'supertest';
-import { mockAlbumRepository, absolution } from 'test/mocks/album';
+import { absolution } from 'test/mocks/album';
 
 describe('infrastructure/album/controllers/get.controller', () => {
-  let app: INestApplication;
-
   beforeAll(async () => {
-    const appModule: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
-      providers: [
-        GetAlbumUsecase,
-        { provide: 'AlbumRepositoryInterface', useValue: mockAlbumRepository },
-      ],
-      controllers: [GetAlbumController],
-    }).compile();
-
-    app = appModule.createNestApplication();
-    await app.init();
-  });
-
-  afterAll(async () => {
-    await app.close();
+    await global.setAppModule(
+      AlbumEntity,
+      GetAlbumUsecase,
+      AlbumRepository,
+      'AlbumRepositoryInterface',
+      GetAlbumController,
+    );
   });
 
   it('should fetch a specific albums according to its id', async () => {
-    const { body, status } = await request(app.getHttpServer()).get(
+    const { body, status } = await request(global.app.getHttpServer()).get(
       `/albums/${absolution.id}`,
     );
 
@@ -37,10 +26,8 @@ describe('infrastructure/album/controllers/get.controller', () => {
   });
 
   it('should fail when album does not exist', async () => {
-    jest.spyOn(mockAlbumRepository, 'findOneById').mockResolvedValue(null);
-
-    const { body, status } = await request(app.getHttpServer()).get(
-      `/albums/${absolution.id}`,
+    const { body, status } = await request(global.app.getHttpServer()).get(
+      `/albums/c36c0f63-2aa8-49c5-a127-3125c63b1e4d`,
     );
 
     expect(status).toBe(404);
