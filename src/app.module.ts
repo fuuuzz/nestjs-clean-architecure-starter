@@ -17,8 +17,5 @@ import { RouterModule } from '@nestjs/core';
       },
     ]),
   ],
-  controllers: [],
-  providers: [AlbumModule],
-  exports: [AlbumModule],
 })
 export class AppModule {}
