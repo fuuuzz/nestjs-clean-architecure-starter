@@ -17,6 +17,8 @@ jobs:
           POSTGRES_USER: dbuser
           POSTGRES_DB: nestjs-clean-architecture-starter-db-test
           POSTGRES_DB_TEST: nestjs-clean-architecture-starter-db-test
+        ports:
+          - '5432:5432'
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
