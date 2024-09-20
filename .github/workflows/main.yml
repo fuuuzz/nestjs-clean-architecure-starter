@@ -7,6 +7,23 @@ jobs:
   test:
     name: Run tests and collect coverage
     runs-on: ubuntu-latest
+    container: node:20-bookworm-slim
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: dbpassword
+          POSTGRES_USER: dbuser
+          POSTGRES_DB: nestjs-clean-architecture-starter-db-test
+          POSTGRES_DB_TEST: nestjs-clean-architecture-starter-db-test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,6 +38,13 @@ jobs:
 
       - name: Run tests
         run: npm run test:cov
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+          POSTGRES_PASSWORD: dbpassword
+          POSTGRES_USER: dbuser
+          POSTGRES_DB: nestjs-clean-architecture-starter-db-dev
+          POSTGRES_DB_TEST: nestjs-clean-architecture-starter-db-test
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v4
