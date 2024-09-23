@@ -25,33 +25,21 @@ global.beforeAll(async () => {
     database: POSTGRES_DB,
   });
 
-  console.log({
-    POSTGRES_HOST,
-    POSTGRES_PORT,
-    POSTGRES_USER,
-    POSTGRES_PASSWORD,
-    POSTGRES_DB,
-  });
-
-  try {
-    appDataSource = await dataSource.initialize();
-    queryRunner = appDataSource.createQueryRunner();
-    await queryRunner.manager.query(
-      `
+  appDataSource = await dataSource.initialize();
+  queryRunner = appDataSource.createQueryRunner();
+  await queryRunner.manager.query(
+    `
           INSERT INTO album (id, title) VALUES
             ($1, $2),
             ($3, $4)
           `,
-      [
-        absolution.id,
-        absolution.title,
-        originOfSymmetry.id,
-        originOfSymmetry.title,
-      ],
-    );
-  } catch (e) {
-    console.log(e);
-  }
+    [
+      absolution.id,
+      absolution.title,
+      originOfSymmetry.id,
+      originOfSymmetry.title,
+    ],
+  );
 });
 
 global.afterAll(async () => {
