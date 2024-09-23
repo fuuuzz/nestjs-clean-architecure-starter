@@ -51,6 +51,7 @@ db.generate-migration:
 # Run all database migrations
 db.migrate:
 	npm run migration:migrate
+	npm run migration:migrate:test
 
 # ----------------------
 # tests

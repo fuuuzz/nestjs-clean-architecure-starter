@@ -1,7 +1,6 @@
 name: Run tests and upload coverage
 
-on: 
-  push
+on: push
 
 jobs:
   test:
@@ -16,7 +15,6 @@ jobs:
           POSTGRES_PASSWORD: dbpassword
           POSTGRES_USER: dbuser
           POSTGRES_DB: nestjs-clean-architecture-starter-db-test
-          POSTGRES_DB_TEST: nestjs-clean-architecture-starter-db-test
         ports:
           - '5432:5432'
         options: >-
@@ -24,7 +22,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-
 
     steps:
       - name: Checkout
@@ -38,15 +35,26 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm run test:cov
+      - name: Install dependencies
+        run: npm run build
+
+      - name: Run db migrations
+        run: npm run migration:migrate
         env:
-          POSTGRES_HOST: localhost
+          POSTGRES_HOST: postgres
           POSTGRES_PORT: 5432
           POSTGRES_PASSWORD: dbpassword
           POSTGRES_USER: dbuser
-          POSTGRES_DB: nestjs-clean-architecture-starter-db-dev
-          POSTGRES_DB_TEST: nestjs-clean-architecture-starter-db-test
+          POSTGRES_DB: nestjs-clean-architecture-starter-db-test
+
+      - name: Run tests
+        run: npm run test:cov
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+          POSTGRES_PASSWORD: dbpassword
+          POSTGRES_USER: dbuser
+          POSTGRES_DB: nestjs-clean-architecture-starter-db-test
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v4

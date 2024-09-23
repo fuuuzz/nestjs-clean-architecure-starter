@@ -14,15 +14,16 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "jest --runInBand",
-    "test:unit": "jest test/unit --runInBand",
-    "test:integration": "jest test/integration --runInBand",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage --runInBand",
+    "test": "POSTGRES_DB=nestjs-clean-architecture-starter-db-test jest --runInBand",
+    "test:unit": "POSTGRES_DB=nestjs-clean-architecture-starter-db-test jest test/unit --runInBand",
+    "test:integration": "POSTGRES_DB=nestjs-clean-architecture-starter-db-test jest test/integration --runInBand",
+    "test:watch": "POSTGRES_DB=nestjs-clean-architecture-starter-db-test jest --watch",
+    "test:cov": "POSTGRES_DB=nestjs-clean-architecture-starter-db-test jest --coverage --runInBand",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "typeorm": "typeorm-ts-node-commonjs",
     "migration:generate": "npm run typeorm -- migration:generate -d src/infrastructure/persistence/typeorm.config.ts",
-    "migration:migrate": "npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts & POSTGRES_DB=nestjs-clean-architecture-starter-db-test npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts"
+    "migration:migrate": "npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts",
+    "migration:migrate:test": "POSTGRES_DB=nestjs-clean-architecture-starter-db-test npm run typeorm -- migration:run -d src/infrastructure/persistence/typeorm.config.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

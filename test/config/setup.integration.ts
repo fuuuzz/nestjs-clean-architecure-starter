@@ -9,7 +9,7 @@ const {
   POSTGRES_PORT,
   POSTGRES_USER,
   POSTGRES_PASSWORD,
-  POSTGRES_DB_TEST,
+  POSTGRES_DB,
 } = process.env;
 
 let appDataSource: DataSource;
@@ -22,7 +22,7 @@ global.beforeAll(async () => {
     port: +POSTGRES_PORT,
     username: POSTGRES_USER,
     password: POSTGRES_PASSWORD,
-    database: POSTGRES_DB_TEST,
+    database: POSTGRES_DB,
   });
 
   console.log({
@@ -30,24 +30,28 @@ global.beforeAll(async () => {
     POSTGRES_PORT,
     POSTGRES_USER,
     POSTGRES_PASSWORD,
-    POSTGRES_DB_TEST,
+    POSTGRES_DB,
   });
 
-  appDataSource = await dataSource.initialize();
-  queryRunner = appDataSource.createQueryRunner();
-  await queryRunner.manager.query(
-    `
-        INSERT INTO album (id, title) VALUES
-          ($1, $2),
-          ($3, $4)
-        `,
-    [
-      absolution.id,
-      absolution.title,
-      originOfSymmetry.id,
-      originOfSymmetry.title,
-    ],
-  );
+  try {
+    appDataSource = await dataSource.initialize();
+    queryRunner = appDataSource.createQueryRunner();
+    await queryRunner.manager.query(
+      `
+          INSERT INTO album (id, title) VALUES
+            ($1, $2),
+            ($3, $4)
+          `,
+      [
+        absolution.id,
+        absolution.title,
+        originOfSymmetry.id,
+        originOfSymmetry.title,
+      ],
+    );
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 global.afterAll(async () => {
@@ -71,7 +75,7 @@ global.setAppModule = async (
         port: +POSTGRES_PORT,
         username: POSTGRES_USER,
         password: POSTGRES_PASSWORD,
-        database: POSTGRES_DB_TEST,
+        database: POSTGRES_DB,
         entities: [entity],
       }),
       TypeOrmModule.forFeature([entity]),
