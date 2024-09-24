@@ -57,6 +57,6 @@ jobs:
           POSTGRES_DB: nestjs-clean-architecture-starter-db-test
 
       - name: Upload results to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
